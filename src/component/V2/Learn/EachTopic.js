@@ -31,9 +31,10 @@ const EachTopic = () => {
       let details = await axios.get(
         `https://wp.amassinginvestment.com/wp-json/rankmath/v1/getHead?url=${link}`
       );
+
       setMetatag(details.data.head);
     } catch (err) {
-      console.log(err);
+      console.log("Failed");
     }
   };
   useEffect(() => {
